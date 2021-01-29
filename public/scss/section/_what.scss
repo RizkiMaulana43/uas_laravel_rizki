@@ -1,0 +1,45 @@
+.what{
+    .container{
+        .row{
+            .kiri{
+                .card{
+
+                    border-radius: 10px;
+                    background-position: center;
+                    background: url(../img/liburan.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    height: 400px;
+.text{
+    margin-top: 240px;
+}
+                }
+            }
+
+            .kanan{
+                .row{
+                    .col{
+                        .card{
+                            border-radius: 10px;
+                            box-shadow: 4px 4px 4px gray;
+                            .bd-highlight{
+                                img{
+                                    width: 270px;
+                                    border-radius: 10px;
+                                }
+                                a{
+                                    text-decoration: none;
+                                    p{
+                                        font-size: 23px;
+                                        color: black;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

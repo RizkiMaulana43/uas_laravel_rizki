@@ -1,0 +1,22 @@
+header{
+    .container{
+        .navbar{                     
+            .navbar-brand{                
+                img{
+                    width: 50%;
+                }
+            }
+            .collapse{ 
+                font-weight: 500;
+                .kiri{
+                    li{
+                        a{
+                            font-size: 17px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
