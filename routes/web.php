@@ -11,22 +11,24 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::prefix('/')
+    ->namespace('Home')
+    ->group(function () {
+        Route::resource('/', 'IndexController');
+        // Route::resource('/ginstagram', 'GinstagramController');
+        // Route::resource('/program', 'ProgramController');
+        // Route::resource('/tv', 'TvController');
+        // Route::resource('/berita', 'BeritaController');
+    });
+    Route::prefix('home')
+    ->namespace('Admin')
+    ->group(function () {
+        Route::resource('/', 'DashboardController');
+        Route::resource('/what', 'WhatController');
+        // Route::resource('/galeri', 'GaleriController');
+        // Route::resource('/rekomendasi', 'RekomendasiController');
+        // Route::resource('/jadwaltv', 'JadwaltvController');
+    });
+Auth::routes();
 
-Route::get('/tiket', 'CrudController@tampiltiket');
-
-
-//login
-Route::get('/login', 'LoginController@login');
-Route::post('/login/auth', 'LoginController@auth');
-Route::get('/logout', 'LoginController@logout');
-
-Route::get('/index-admin', function () {
-    if(session()->exist('admin')) {
-        return view('index-admin');
-    }
-    else { return redirect('/login'); }
-    return redirect('/login');
-});
+Route::get('/home', 'HomeController@index')->name('home');

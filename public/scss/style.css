@@ -43,22 +43,4 @@ header .container .navbar .collapse .kiri li a {
   color: black;
   font-weight: 500;
 }
-
-.home-fasilitas .container h3 {
-  font-size: 18px;
-}
-
-.home-fasilitas .container ul {
-  list-style-type: none;
-}
-
-.home-fasilitas .container li {
-  list-style-type: none;
-  margin-bottom: 20px;
-}
-
-.home-fasilitas .container li img {
-  margin-right: 15px;
-  width: 40px;
-}
 /*# sourceMappingURL=style.css.map */
